@@ -58,6 +58,17 @@ app.get('/api/health', (req, res) => {
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/quiz', quizRoutes);
 
+// Serve static files from React app (production)
+if (process.env.NODE_ENV === 'production') {
+    const distPath = path.join(__dirname, '..', 'dist');
+    app.use(express.static(distPath));
+
+    // All other routes serve the React app
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(distPath, 'index.html'));
+    });
+}
+
 
 // Error handling middleware
 app.use((err, req, res, next) => {

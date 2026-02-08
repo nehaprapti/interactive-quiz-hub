@@ -1,10 +1,10 @@
 services:
-  # Backend API Service
+  # Full Stack Application (Backend + Frontend)
   - type: web
-    name: quiz-hub-backend
+    name: interactive-quiz-hub
     runtime: node
-    buildCommand: cd server && npm install
-    startCommand: node server/index.js
+    buildCommand: npm install && npm run build && cd server && npm install
+    startCommand: NODE_ENV=production node server/index.js
     envVars:
       - key: NODE_ENV
         value: production
@@ -13,19 +13,7 @@ services:
       - key: JWT_SECRET
         sync: false  # Set in Render dashboard
       - key: FRONTEND_URL
-        sync: false  # Set in Render dashboard (e.g., https://quiz-hub.onrender.com)
-    healthCheckPath: /api/health
-
-  # Frontend Static Site
-  - type: web
-    name: quiz-hub-frontend
-    runtime: static
-    buildCommand: npm install && npm run build
-    staticPublishPath: ./dist
-    envVars:
+        value: https://interactive-quiz-hub.onrender.com
       - key: VITE_API_URL
-        sync: false  # Set in Render dashboard (e.g., https://quiz-hub-backend.onrender.com)
-    routes:
-      - type: rewrite
-        source: /*
-        destination: /index.html
+        value: https://interactive-quiz-hub.onrender.com
+    healthCheckPath: /api/health
