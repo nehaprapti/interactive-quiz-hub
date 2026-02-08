@@ -18,7 +18,9 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
+// In monorepo, API is on same origin, so use current origin in production
+const API_URL = import.meta.env.VITE_API_URL ||
+    (import.meta.env.MODE === 'production' ? `${window.location.origin}/api` : 'http://localhost:3000/api');
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const [user, setUser] = useState<User | null>(null);

@@ -30,7 +30,8 @@ const QuizPage = () => {
     const submitScore = async () => {
       if (isFinished && quiz && token) {
         try {
-          const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+          const API_URL = import.meta.env.VITE_API_URL ||
+            (import.meta.env.MODE === 'production' ? window.location.origin : 'http://localhost:3000');
           await fetch(`${API_URL}/api/quiz/submit-score`, {
             method: 'POST',
             headers: {
