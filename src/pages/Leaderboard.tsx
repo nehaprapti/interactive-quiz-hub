@@ -30,7 +30,8 @@ const Leaderboard = () => {
   useEffect(() => {
     const fetchLeaderboard = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/quiz/leaderboard');
+        const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+        const response = await fetch(`${API_URL}/api/quiz/leaderboard`);
         const data = await response.json();
         setLeaderboard(data.leaderboard || []);
       } catch (error) {
@@ -142,8 +143,8 @@ const Leaderboard = () => {
                 >
                   <span
                     className={`w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold font-display ${i + 1 <= 3
-                        ? "text-primary-foreground"
-                        : "text-muted-foreground bg-muted"
+                      ? "text-primary-foreground"
+                      : "text-muted-foreground bg-muted"
                       }`}
                     style={
                       i + 1 <= 3

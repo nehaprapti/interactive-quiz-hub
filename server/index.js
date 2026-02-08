@@ -9,9 +9,15 @@ const quizRoutes = require('./routes/quiz');
 
 const app = express();
 
-// Middleware
+// CORS configuration
+const allowedOrigins = [
+    'http://localhost:8080',
+    'http://localhost:5173',
+    process.env.FRONTEND_URL
+].filter(Boolean); // Remove undefined values
+
 app.use(cors({
-    origin: 'http://localhost:8080',
+    origin: allowedOrigins,
     credentials: true
 }));
 app.use(express.json());
@@ -24,14 +30,15 @@ mongoose.connect(process.env.MONGO_URL)
         process.exit(1);
     });
 
+// Health check endpoint for Render
+app.get('/api/health', (req, res) => {
+    res.status(200).json({ status: 'ok', message: 'Server is running' });
+});
+
 // Routes
-app.use('/api/auth', authRoutes);
+app.use('/api/auth', require('./routes/auth'));
 app.use('/api/quiz', quizRoutes);
 
-// Health check
-app.get('/api/health', (req, res) => {
-    res.json({ status: 'OK', message: 'Server is running' });
-});
 
 // Error handling middleware
 app.use((err, req, res, next) => {
