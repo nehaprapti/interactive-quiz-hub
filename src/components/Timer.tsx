@@ -5,9 +5,10 @@ interface TimerProps {
   timeLimit: number;
   isActive: boolean;
   onTimeUp: () => void;
+  onChange?: (timeLeft: number) => void;
 }
 
-const Timer = ({ timeLimit, isActive, onTimeUp }: TimerProps) => {
+const Timer = ({ timeLimit, isActive, onTimeUp, onChange }: TimerProps) => {
   const [timeLeft, setTimeLeft] = useState(timeLimit);
 
   useEffect(() => {
@@ -19,17 +20,24 @@ const Timer = ({ timeLimit, isActive, onTimeUp }: TimerProps) => {
 
     const interval = setInterval(() => {
       setTimeLeft((prev) => {
-        if (prev <= 1) {
+        const newTime = prev <= 1 ? 0 : prev - 1;
+
+        // Notify parent of time change
+        if (onChange) {
+          onChange(newTime);
+        }
+
+        if (newTime === 0) {
           clearInterval(interval);
           onTimeUp();
-          return 0;
         }
-        return prev - 1;
+
+        return newTime;
       });
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [isActive, timeLeft, onTimeUp]);
+  }, [isActive, timeLeft, onTimeUp, onChange]);
 
   const progress = (timeLeft / timeLimit) * 100;
   const isUrgent = timeLeft <= 5;
@@ -61,9 +69,8 @@ const Timer = ({ timeLimit, isActive, onTimeUp }: TimerProps) => {
           />
         </svg>
         <span
-          className={`absolute inset-0 flex items-center justify-center text-sm font-bold font-display ${
-            isUrgent ? "text-destructive animate-timer-pulse" : "text-foreground"
-          }`}
+          className={`absolute inset-0 flex items-center justify-center text-sm font-bold font-display ${isUrgent ? "text-destructive animate-timer-pulse" : "text-foreground"
+            }`}
         >
           {timeLeft}
         </span>

@@ -1,11 +1,15 @@
 import { motion } from "framer-motion";
-import { Sparkles } from "lucide-react";
+import { Sparkles, LogOut, LogIn, UserPlus } from "lucide-react";
+import { Link } from "react-router-dom";
+import { useAuth } from "@/contexts/AuthContext";
 import HeroSection from "@/components/HeroSection";
 import QuizCard from "@/components/QuizCard";
 import ParticleBackground from "@/components/ParticleBackground";
 import { quizzes } from "@/data/quizData";
 
 const Index = () => {
+  const { user, logout } = useAuth();
+
   return (
     <div className="min-h-screen bg-background relative">
       <ParticleBackground />
@@ -22,7 +26,38 @@ const Index = () => {
           <span className="text-lg font-bold font-display text-foreground">QuizArena</span>
         </div>
         <div className="flex items-center gap-4">
-          <span className="text-sm text-muted-foreground hidden sm:inline">Explore • Compete • Learn</span>
+          {user ? (
+            <>
+              <span className="text-sm font-medium text-foreground hidden sm:inline">
+                Welcome, {user.firstName}!
+              </span>
+              <button
+                onClick={logout}
+                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-muted hover:bg-muted/80 text-foreground text-sm font-medium transition-colors"
+              >
+                <LogOut className="w-4 h-4" />
+                <span className="hidden sm:inline">Logout</span>
+              </button>
+            </>
+          ) : (
+            <>
+              <Link
+                to="/login"
+                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-muted hover:bg-muted/80 text-foreground text-sm font-medium transition-colors"
+              >
+                <LogIn className="w-4 h-4" />
+                <span className="hidden sm:inline">Login</span>
+              </Link>
+              <Link
+                to="/signup"
+                className="flex items-center gap-2 px-4 py-2 rounded-lg text-primary-foreground text-sm font-medium transition-all hover:scale-105"
+                style={{ background: "var(--gradient-primary)" }}
+              >
+                <UserPlus className="w-4 h-4" />
+                <span className="hidden sm:inline">Sign Up</span>
+              </Link>
+            </>
+          )}
         </div>
       </nav>
 

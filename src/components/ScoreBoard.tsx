@@ -60,10 +60,17 @@ const ScoreBoard = ({
     }
   }, [percentage]);
 
+  // Format time as MM:SS
+  const formatTime = (seconds: number) => {
+    const mins = Math.floor(seconds / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${mins}:${secs.toString().padStart(2, '0')}`;
+  };
+
   const stats = [
     { icon: Target, label: "Accuracy", value: `${percentage}%`, color: "text-primary" },
     { icon: Flame, label: "Max Streak", value: `${maxStreak}x`, color: "text-warning" },
-    { icon: Clock, label: "Total Time", value: `${totalTime}s`, color: "text-secondary" },
+    { icon: Clock, label: "Total Time", value: formatTime(totalTime), color: "text-secondary" },
     { icon: Trophy, label: "Score", value: `${score}`, color: "text-accent" },
   ];
 

@@ -1,0 +1,304 @@
+
+{
+  "quiz": {
+    "title": "AI Around Us – Quiz Questions",
+    "institution": "Department of Information Technology, Sona College of Technology",
+    "event": "AI Quiz",
+    "total_marks": 50,
+    "rounds": [
+      {
+        "round_number": 1,
+        "round_name": "AI Basics (MCQs)",
+        "questions": [
+          {
+            "question_number": 1,
+            "question": "What does AI stand for?",
+            "options": {
+              "A": "Automated Intelligence",
+              "B": "Artificial Intelligence",
+              "C": "Advanced Intelligence",
+              "D": "Applied Intelligence"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "question_number": 2,
+            "question": "Which of the following is an example of AI?",
+            "options": {
+              "A": "Calculator",
+              "B": "Washing Machine",
+              "C": "Virtual Assistant",
+              "D": "Electric Fan"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "question_number": 3,
+            "question": "Machine Learning is a subset of:",
+            "options": {
+              "A": "Data Science",
+              "B": "Artificial Intelligence",
+              "C": "Computer Networks",
+              "D": "Cyber Security"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "question_number": 4,
+            "question": "Which language is commonly used for AI development?",
+            "options": {
+              "A": "C",
+              "B": "Python",
+              "C": "HTML",
+              "D": "PHP"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "question_number": 5,
+            "question": "Which of the following is NOT an AI application?",
+            "options": {
+              "A": "Face Recognition",
+              "B": "Chatbots",
+              "C": "Email Spam Filtering",
+              "D": "MS Paint"
+            },
+            "correct_answer": "D"
+          },
+          {
+            "question_number": 6,
+            "question": "AI that can perform only specific tasks is called:",
+            "options": {
+              "A": "General AI",
+              "B": "Super AI",
+              "C": "Narrow AI",
+              "D": "Strong AI"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "question_number": 7,
+            "question": "Which field enables machines to learn from data?",
+            "options": {
+              "A": "Machine Learning",
+              "B": "Networking",
+              "C": "Cloud Computing",
+              "D": "Web Development"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "question_number": 8,
+            "question": "Google Maps uses AI mainly for:",
+            "options": {
+              "A": "Gaming",
+              "B": "Route Optimization",
+              "C": "Music Streaming",
+              "D": "Image Editing"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "question_number": 9,
+            "question": "Which of these uses AI for recommendations?",
+            "options": {
+              "A": "Netflix",
+              "B": "Calculator",
+              "C": "Notepad",
+              "D": "Paint"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "question_number": 10,
+            "question": "AI systems require large amounts of:",
+            "options": {
+              "A": "Hardware",
+              "B": "Electricity",
+              "C": "Data",
+              "D": "Internet"
+            },
+            "correct_answer": "C"
+          }
+        ]
+      },
+      {
+        "round_number": 2,
+        "round_name": "AI Applications (Short Answer)",
+        "questions": [
+          {
+            "question_number": 1,
+            "question": "How is AI used in healthcare?",
+            "options": {
+              "A": "Managing hospital parking",
+              "B": "Diagnosing diseases and analyzing medical images",
+              "C": "Printing medical reports only",
+              "D": "Cleaning hospital rooms"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "question_number": 2,
+            "question": "Which of the following is an application of AI in education?",
+            "options": {
+              "A": "Smart tutoring systems",
+              "B": "Automated grading systems",
+              "C": "Both A and B",
+              "D": "None of these"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "question_number": 3,
+            "question": "How does AI help in smart cities?",
+            "options": {
+              "A": "Traffic management and energy optimization",
+              "B": "Painting buildings",
+              "C": "Manual ticket checking",
+              "D": "Paper record storage"
+            },
+            "correct_answer": "A"
+          },
+          {
+            "question_number": 4,
+            "question": "How is AI used in self-driving cars?",
+            "options": {
+              "A": "Playing music automatically",
+              "B": "Detecting roads, obstacles, and traffic signals",
+              "C": "Changing tire manually",
+              "D": "Fuel filling"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "question_number": 5,
+            "question": "How is AI used in mobile phones?",
+            "options": {
+              "A": "Camera image enhancement and voice assistants",
+              "B": "Only making calls",
+              "C": "Only sending SMS",
+              "D": "Only charging battery"
+            },
+            "correct_answer": "A"
+          }
+        ]
+      },
+      {
+        "round_number": 3,
+        "round_name": "Rapid Fire",
+        "questions": [
+          {
+            "question_number": 1,
+            "question": "Name one AI-powered voice assistant.",
+            "options": {
+              "A": "Google Docs Voice Typing",
+              "B": "Alexa",
+              "C": "Cortana",
+              "D": "Bixby"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "question_number": 2,
+            "question": "What is the full form of ML?",
+            "options": {
+              "A": "Machine Language",
+              "B": "Model Learning",
+              "C": "Machine Learning",
+              "D": "Memory Learning"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "question_number": 3,
+            "question": "Which company developed ChatGPT?",
+            "options": {
+              "A": "Microsoft Research",
+              "B": "Meta AI",
+              "C": "Google DeepMind",
+              "D": "OpenAI"
+            },
+            "correct_answer": "D"
+          },
+          {
+            "question_number": 4,
+            "question": "Name one AI application used in banking.",
+            "options": {
+              "A": "Rule-Based Transaction Filtering",
+              "B": "Chatbots for Customer Support",
+              "C": "Fraud Detection Systems",
+              "D": "AI-Based Credit Scoring"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "question_number": 5,
+            "question": "AI that mimics human thinking is called?",
+            "options": {
+              "A": "Computational Intelligence",
+              "B": "Artificial Intelligence",
+              "C": "Machine Intelligence",
+              "D": "Cognitive Computing"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "question_number": 6,
+            "question": "Name one AI tool used for image generation.",
+            "options": {
+              "A": "Stable Diffusion",
+              "B": "Adobe Firefly",
+              "C": "DALL·E",
+              "D": "Midjourney"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "question_number": 7,
+            "question": "Which AI is used in email spam detection?",
+            "options": {
+              "A": "Deep Learning Classification Models",
+              "B": "Supervised Machine Learning",
+              "C": "Bayesian Filtering Algorithms",
+              "D": "Natural Language Processing"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "question_number": 8,
+            "question": "AI used in robots to see is called?",
+            "options": {
+              "A": "Optical Character Recognition",
+              "B": "Image Processing",
+              "C": "Visual SLAM",
+              "D": "Computer Vision"
+            },
+            "correct_answer": "D"
+          },
+          {
+            "question_number": 9,
+            "question": "Name one AI-based navigation app.",
+            "options": {
+              "A": "HERE WeGo",
+              "B": "Apple Maps",
+              "C": "Google Maps",
+              "D": "Waze"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "question_number": 10,
+            "question": "What is the key requirement for training AI models?",
+            "options": {
+              "A": "GPU Hardware Only",
+              "B": "High-Speed Internet",
+              "C": "High-Quality Labeled Data",
+              "D": "Large Storage Systems"
+            },
+            "correct_answer": "C"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -84,6 +84,7 @@ const QuizQuestionComponent = ({
             timeLimit={question.timeLimit}
             isActive={timerActive}
             onTimeUp={handleTimeUp}
+            onChange={setCurrentTimeLeft}
           />
 
           <div className="flex items-center gap-3">

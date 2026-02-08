@@ -1,8 +1,9 @@
-import { useState, useCallback, useMemo } from "react";
+import { useState, useCallback, useMemo, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, Sparkles } from "lucide-react";
 import { quizzes } from "@/data/quizData";
+import { useAuth } from "@/contexts/AuthContext";
 import QuizQuestionComponent from "@/components/QuizQuestion";
 import ProgressBar from "@/components/ProgressBar";
 import ScoreBoard from "@/components/ScoreBoard";
@@ -11,6 +12,7 @@ import ParticleBackground from "@/components/ParticleBackground";
 const QuizPage = () => {
   const { quizId } = useParams();
   const navigate = useNavigate();
+  const { token } = useAuth();
 
   const quiz = useMemo(() => quizzes.find((q) => q.id === quizId), [quizId]);
 
@@ -22,6 +24,36 @@ const QuizPage = () => {
   const [totalTime, setTotalTime] = useState(0);
   const [isFinished, setIsFinished] = useState(false);
   const [started, setStarted] = useState(false);
+
+  // Submit score to backend when quiz finishes
+  useEffect(() => {
+    const submitScore = async () => {
+      if (isFinished && quiz && token) {
+        try {
+          await fetch('http://localhost:3000/api/quiz/submit-score', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${token}`
+            },
+            body: JSON.stringify({
+              quizId: quiz.id,
+              quizTitle: quiz.title,
+              score,
+              totalQuestions: quiz.questions.length,
+              correctAnswers,
+              maxStreak,
+              totalTime
+            })
+          });
+        } catch (error) {
+          console.error('Failed to submit score:', error);
+        }
+      }
+    };
+
+    submitScore();
+  }, [isFinished, quiz, token, score, correctAnswers, maxStreak, totalTime]);
 
   const handleAnswer = useCallback(
     (selectedIndex: number, timeLeft: number) => {
