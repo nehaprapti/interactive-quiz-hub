@@ -30,24 +30,26 @@ mongoose.connect(process.env.MONGO_URL)
         process.exit(1);
     });
 
-// Root route
-app.get('/', (req, res) => {
-    res.json({
-        message: 'Quiz Hub API Server',
-        status: 'running',
-        endpoints: {
-            health: '/api/health',
-            auth: {
-                signup: 'POST /api/auth/signup',
-                login: 'POST /api/auth/login'
-            },
-            quiz: {
-                submitScore: 'POST /api/quiz/submit-score',
-                leaderboard: 'GET /api/quiz/leaderboard'
+// Root route (only in development)
+if (process.env.NODE_ENV !== 'production') {
+    app.get('/', (req, res) => {
+        res.json({
+            message: 'Quiz Hub API Server',
+            status: 'running',
+            endpoints: {
+                health: '/api/health',
+                auth: {
+                    signup: 'POST /api/auth/signup',
+                    login: 'POST /api/auth/login'
+                },
+                quiz: {
+                    submitScore: 'POST /api/quiz/submit-score',
+                    leaderboard: 'GET /api/quiz/leaderboard'
+                }
             }
-        }
+        });
     });
-});
+}
 
 // Health check endpoint for Render
 app.get('/api/health', (req, res) => {
