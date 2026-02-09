@@ -11,20 +11,22 @@ const app = express();
 
 // CORS configuration
 const allowedOrigins = [
+    'http://localhost:3000',      // Production mode (backend serves frontend)
     'http://localhost:8080',
-    'http://localhost:5173',
+    'http://localhost:5173',      // Development mode (Vite dev server)
     'https://interactive-quiz-hub.onrender.com', // Production URL
     process.env.FRONTEND_URL
 ].filter(Boolean); // Remove undefined values
 
 app.use(cors({
     origin: function (origin, callback) {
-        // Allow requests with no origin (like mobile apps or curl requests)
+        // Allow requests with no origin (same-origin, direct access, or static assets)
         if (!origin) return callback(null, true);
 
         if (allowedOrigins.indexOf(origin) !== -1) {
             callback(null, true);
         } else {
+            console.log('CORS blocked origin:', origin);
             callback(new Error('Not allowed by CORS'));
         }
     },
@@ -74,7 +76,7 @@ app.use('/api/quiz', quizRoutes);
 
 // Serve static files from React app (production)
 if (process.env.NODE_ENV === 'production') {
-    const distPath = path.join(__dirname, '..', 'dist');
+    const distPath = path.join(__dirname, '..', '..', 'frontend', 'dist');
     app.use(express.static(distPath));
 
     // All other routes serve the React app
