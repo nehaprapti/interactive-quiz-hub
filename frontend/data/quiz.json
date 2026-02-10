@@ -1,4 +1,3 @@
-
 {
   "quiz": {
     "title": "AI Around Us – Quiz Questions",
@@ -12,113 +11,113 @@
         "questions": [
           {
             "question_number": 1,
-            "question": "What does AI stand for?",
+            "question": "Which of the following best distinguishes Artificial Intelligence from conventional programming?",
             "options": {
-              "A": "Automated Intelligence",
-              "B": "Artificial Intelligence",
-              "C": "Advanced Intelligence",
-              "D": "Applied Intelligence"
+              "A": "AI requires more computational resources than conventional programming",
+              "B": "AI systems can learn and adapt from experience without being explicitly programmed for every scenario",
+              "C": "AI uses more advanced programming languages",
+              "D": "AI systems always perform better than rule-based systems"
             },
             "correct_answer": "B"
           },
           {
             "question_number": 2,
-            "question": "Which of the following is an example of AI?",
+            "question": "Which AI paradigm enables systems like Siri and Alexa to understand context across multiple interactions?",
             "options": {
-              "A": "Calculator",
-              "B": "Washing Machine",
-              "C": "Virtual Assistant",
-              "D": "Electric Fan"
+              "A": "Stateless rule-based systems",
+              "B": "Reinforcement learning with contextual bandits",
+              "C": "Natural Language Processing with contextual memory",
+              "D": "Convolutional Neural Networks"
             },
             "correct_answer": "C"
           },
           {
             "question_number": 3,
-            "question": "Machine Learning is a subset of:",
+            "question": "What is the relationship between Deep Learning, Machine Learning, and Artificial Intelligence?",
             "options": {
-              "A": "Data Science",
-              "B": "Artificial Intelligence",
-              "C": "Computer Networks",
-              "D": "Cyber Security"
+              "A": "Deep Learning ⊂ Machine Learning ⊂ Artificial Intelligence",
+              "B": "Machine Learning ⊂ Deep Learning ⊂ Artificial Intelligence",
+              "C": "They are independent fields with no hierarchical relationship",
+              "D": "Artificial Intelligence ⊂ Machine Learning ⊂ Deep Learning"
             },
-            "correct_answer": "B"
+            "correct_answer": "A"
           },
           {
             "question_number": 4,
-            "question": "Which language is commonly used for AI development?",
+            "question": "Which Python library is specifically designed for building and training deep neural networks with GPU acceleration?",
             "options": {
-              "A": "C",
-              "B": "Python",
-              "C": "HTML",
-              "D": "PHP"
+              "A": "NumPy and SciPy for mathematical operations",
+              "B": "Pandas for data manipulation",
+              "C": "PyTorch or TensorFlow for deep learning frameworks",
+              "D": "Matplotlib for data visualization"
             },
-            "correct_answer": "B"
+            "correct_answer": "C"
           },
           {
             "question_number": 5,
-            "question": "Which of the following is NOT an AI application?",
+            "question": "Which of the following applications requires the LEAST amount of AI sophistication?",
             "options": {
-              "A": "Face Recognition",
-              "B": "Chatbots",
-              "C": "Email Spam Filtering",
-              "D": "MS Paint"
-            },
-            "correct_answer": "D"
-          },
-          {
-            "question_number": 6,
-            "question": "AI that can perform only specific tasks is called:",
-            "options": {
-              "A": "General AI",
-              "B": "Super AI",
-              "C": "Narrow AI",
-              "D": "Strong AI"
+              "A": "Real-time facial emotion recognition",
+              "B": "Context-aware conversational chatbots",
+              "C": "Rule-based email spam filtering using keyword matching",
+              "D": "Autonomous vehicle path planning"
             },
             "correct_answer": "C"
           },
           {
-            "question_number": 7,
-            "question": "Which field enables machines to learn from data?",
+            "question_number": 6,
+            "question": "What fundamental limitation distinguishes Narrow AI from Artificial General Intelligence (AGI)?",
             "options": {
-              "A": "Machine Learning",
-              "B": "Networking",
-              "C": "Cloud Computing",
-              "D": "Web Development"
-            },
-            "correct_answer": "A"
-          },
-          {
-            "question_number": 8,
-            "question": "Google Maps uses AI mainly for:",
-            "options": {
-              "A": "Gaming",
-              "B": "Route Optimization",
-              "C": "Music Streaming",
-              "D": "Image Editing"
+              "A": "Narrow AI has less computational power",
+              "B": "Narrow AI can only excel at specific tasks it was trained for and cannot transfer knowledge across domains",
+              "C": "Narrow AI is less accurate than AGI",
+              "D": "Narrow AI doesn't use neural networks"
             },
             "correct_answer": "B"
           },
           {
-            "question_number": 9,
-            "question": "Which of these uses AI for recommendations?",
+            "question_number": 7,
+            "question": "Which learning paradigm allows machines to discover patterns in unlabeled data without human supervision?",
             "options": {
-              "A": "Netflix",
-              "B": "Calculator",
-              "C": "Notepad",
-              "D": "Paint"
+              "A": "Supervised Learning with labeled datasets",
+              "B": "Reinforcement Learning with reward signals",
+              "C": "Unsupervised Learning through clustering and pattern detection",
+              "D": "Transfer Learning from pre-trained models"
+            },
+            "correct_answer": "C"
+          },
+          {
+            "question_number": 8,
+            "question": "Google Maps' route optimization combines multiple AI techniques. Which is the PRIMARY challenge it addresses?",
+            "options": {
+              "A": "Real-time traffic prediction using historical and live data",
+              "B": "Image recognition for street signs",
+              "C": "Voice recognition for navigation commands",
+              "D": "User interface design optimization"
             },
             "correct_answer": "A"
           },
           {
-            "question_number": 10,
-            "question": "AI systems require large amounts of:",
+            "question_number": 9,
+            "question": "Netflix's recommendation system primarily uses which ML technique to personalize content suggestions?",
             "options": {
-              "A": "Hardware",
-              "B": "Electricity",
-              "C": "Data",
-              "D": "Internet"
+              "A": "Random content selection algorithms",
+              "B": "Collaborative filtering and deep learning on user behavior patterns",
+              "C": "Simple popularity-based ranking",
+              "D": "Manual content curation by editors"
             },
-            "correct_answer": "C"
+            "correct_answer": "B"
+          },
+          {
+            "question_number": 10,
+            "question": "Why do modern AI systems require massive datasets for training?",
+            "options": {
+              "A": "To justify the cost of expensive hardware",
+              "B": "Neural networks need extensive examples to learn complex patterns and generalize to unseen data",
+              "C": "Data storage companies need more revenue",
+              "D": "Larger datasets always guarantee better performance"
+            },
+            "correct_answer": "B"
           }
         ]
       },
@@ -128,56 +127,56 @@
         "questions": [
           {
             "question_number": 1,
-            "question": "How is AI used in healthcare?",
+            "question": "Beyond basic image analysis, how are advanced AI systems transforming medical diagnostics?",
             "options": {
-              "A": "Managing hospital parking",
-              "B": "Diagnosing diseases and analyzing medical images",
-              "C": "Printing medical reports only",
-              "D": "Cleaning hospital rooms"
+              "A": "Simple digital record keeping and appointment scheduling",
+              "B": "Deep learning models detect subtle patterns in medical imaging, predict disease progression, and assist in personalized treatment planning",
+              "C": "Automating billing and insurance claims processing",
+              "D": "Managing hospital inventory and supply chains"
             },
             "correct_answer": "B"
           },
           {
             "question_number": 2,
-            "question": "Which of the following is an application of AI in education?",
+            "question": "What is the most significant advantage of AI-powered adaptive learning systems in education?",
             "options": {
-              "A": "Smart tutoring systems",
-              "B": "Automated grading systems",
-              "C": "Both A and B",
-              "D": "None of these"
+              "A": "Reducing the need for human teachers",
+              "B": "Personalizing learning pace, content difficulty, and teaching style based on individual student performance and learning patterns",
+              "C": "Eliminating the need for physical classrooms",
+              "D": "Automating administrative tasks only"
             },
-            "correct_answer": "C"
+            "correct_answer": "B"
           },
           {
             "question_number": 3,
-            "question": "How does AI help in smart cities?",
+            "question": "Which AI technique is crucial for smart cities to optimize energy consumption in real-time?",
             "options": {
-              "A": "Traffic management and energy optimization",
-              "B": "Painting buildings",
-              "C": "Manual ticket checking",
-              "D": "Paper record storage"
+              "A": "Manual monitoring and scheduled adjustments",
+              "B": "Predictive analytics and reinforcement learning to forecast demand and automatically adjust resource allocation",
+              "C": "Static scheduling based on historical averages",
+              "D": "Simple on/off automation timers"
             },
-            "correct_answer": "A"
+            "correct_answer": "B"
           },
           {
             "question_number": 4,
-            "question": "How is AI used in self-driving cars?",
+            "question": "What is the primary AI challenge in autonomous vehicle perception systems?",
             "options": {
-              "A": "Playing music automatically",
-              "B": "Detecting roads, obstacles, and traffic signals",
-              "C": "Changing tire manually",
-              "D": "Fuel filling"
+              "A": "Playing entertainment media for passengers",
+              "B": "Real-time sensor fusion from cameras, lidar, and radar to create accurate 3D environmental models under diverse weather conditions",
+              "C": "Managing fuel efficiency calculations",
+              "D": "Providing GPS navigation like regular cars"
             },
             "correct_answer": "B"
           },
           {
             "question_number": 5,
-            "question": "How is AI used in mobile phones?",
+            "question": "How do modern smartphone AI processors (Neural Processing Units) differ from traditional CPUs?",
             "options": {
-              "A": "Camera image enhancement and voice assistants",
-              "B": "Only making calls",
-              "C": "Only sending SMS",
-              "D": "Only charging battery"
+              "A": "They are specialized chips optimized for parallel matrix operations required by neural networks, enabling on-device AI inference",
+              "B": "They only handle basic computational tasks",
+              "C": "They are identical to CPUs with different marketing names",
+              "D": "They exclusively manage wireless connectivity"
             },
             "correct_answer": "A"
           }
@@ -189,113 +188,113 @@
         "questions": [
           {
             "question_number": 1,
-            "question": "Name one AI-powered voice assistant.",
+            "question": "Which voice assistant uses Amazon's proprietary wake word detection and natural language understanding?",
             "options": {
-              "A": "Google Docs Voice Typing",
-              "B": "Alexa",
-              "C": "Cortana",
-              "D": "Bixby"
+              "A": "Google Assistant with Gemini integration",
+              "B": "Amazon Alexa with AWS infrastructure",
+              "C": "Apple Siri with on-device processing",
+              "D": "Microsoft Cortana with Bing integration"
             },
             "correct_answer": "B"
           },
           {
             "question_number": 2,
-            "question": "What is the full form of ML?",
+            "question": "What distinguishes Deep Learning from traditional Machine Learning?",
             "options": {
-              "A": "Machine Language",
-              "B": "Model Learning",
-              "C": "Machine Learning",
-              "D": "Memory Learning"
+              "A": "Deep Learning uses more data storage",
+              "B": "Deep Learning employs multi-layered neural networks that automatically extract hierarchical features from raw data",
+              "C": "Deep Learning is older technology",
+              "D": "Deep Learning only works on images"
             },
-            "correct_answer": "C"
+            "correct_answer": "B"
           },
           {
             "question_number": 3,
-            "question": "Which company developed ChatGPT?",
+            "question": "Which transformer architecture does ChatGPT primarily use for language generation?",
             "options": {
-              "A": "Microsoft Research",
-              "B": "Meta AI",
-              "C": "Google DeepMind",
-              "D": "OpenAI"
-            },
-            "correct_answer": "D"
-          },
-          {
-            "question_number": 4,
-            "question": "Name one AI application used in banking.",
-            "options": {
-              "A": "Rule-Based Transaction Filtering",
-              "B": "Chatbots for Customer Support",
-              "C": "Fraud Detection Systems",
-              "D": "AI-Based Credit Scoring"
+              "A": "BERT (Bidirectional Encoder Representations)",
+              "B": "CNN (Convolutional Neural Network)",
+              "C": "GPT (Generative Pre-trained Transformer)",
+              "D": "LSTM (Long Short-Term Memory)"
             },
             "correct_answer": "C"
           },
           {
-            "question_number": 5,
-            "question": "AI that mimics human thinking is called?",
+            "question_number": 4,
+            "question": "Which ML technique do banks primarily use for detecting fraudulent transactions in real-time?",
             "options": {
-              "A": "Computational Intelligence",
-              "B": "Artificial Intelligence",
-              "C": "Machine Intelligence",
-              "D": "Cognitive Computing"
+              "A": "Manual rule-based transaction limits",
+              "B": "Anomaly detection and supervised classification models analyzing transaction patterns",
+              "C": "Random transaction blocking",
+              "D": "Simple threshold-based filtering"
+            },
+            "correct_answer": "B"
+          },
+          {
+            "question_number": 5,
+            "question": "What is the key difference between Artificial Intelligence and Cognitive Computing?",
+            "options": {
+              "A": "There is no difference, they are synonyms",
+              "B": "Cognitive Computing focuses on augmenting human decision-making by simulating human thought processes rather than replacing them",
+              "C": "Cognitive Computing is faster than AI",
+              "D": "Cognitive Computing doesn't use neural networks"
             },
             "correct_answer": "B"
           },
           {
             "question_number": 6,
-            "question": "Name one AI tool used for image generation.",
+            "question": "Which technique underlies AI image generation models like DALL·E and Stable Diffusion?",
             "options": {
-              "A": "Stable Diffusion",
-              "B": "Adobe Firefly",
-              "C": "DALL·E",
-              "D": "Midjourney"
+              "A": "Simple template matching and filtering",
+              "B": "Diffusion models or GANs (Generative Adversarial Networks) trained on text-image pairs",
+              "C": "Random pixel generation",
+              "D": "Basic photo editing algorithms"
             },
-            "correct_answer": "C"
+            "correct_answer": "B"
           },
           {
             "question_number": 7,
-            "question": "Which AI is used in email spam detection?",
+            "question": "What makes supervised learning effective for spam detection compared to simple keyword filtering?",
             "options": {
-              "A": "Deep Learning Classification Models",
-              "B": "Supervised Machine Learning",
-              "C": "Bayesian Filtering Algorithms",
-              "D": "Natural Language Processing"
+              "A": "It uses longer word lists",
+              "B": "It learns complex patterns and semantic relationships from labeled examples, adapting to evolving spam tactics",
+              "C": "It blocks all emails by default",
+              "D": "It only checks the sender's email address"
             },
             "correct_answer": "B"
           },
           {
             "question_number": 8,
-            "question": "AI used in robots to see is called?",
+            "question": "How does Computer Vision differ from simple image processing in robotics?",
             "options": {
-              "A": "Optical Character Recognition",
-              "B": "Image Processing",
-              "C": "Visual SLAM",
-              "D": "Computer Vision"
+              "A": "Computer Vision only adjusts image brightness",
+              "B": "Computer Vision extracts semantic meaning and understanding from images, enabling scene interpretation and object recognition",
+              "C": "Computer Vision is slower than image processing",
+              "D": "Computer Vision only works with black and white images"
             },
-            "correct_answer": "D"
+            "correct_answer": "B"
           },
           {
             "question_number": 9,
-            "question": "Name one AI-based navigation app.",
+            "question": "What AI capability makes Google Maps superior to traditional GPS navigation?",
             "options": {
-              "A": "HERE WeGo",
-              "B": "Apple Maps",
-              "C": "Google Maps",
-              "D": "Waze"
+              "A": "Larger map database storage",
+              "B": "Machine learning for real-time traffic prediction, ETA calculation, and dynamic route optimization",
+              "C": "Better satellite signal reception",
+              "D": "More detailed street names"
             },
-            "correct_answer": "C"
+            "correct_answer": "B"
           },
           {
             "question_number": 10,
-            "question": "What is the key requirement for training AI models?",
+            "question": "Why is high-quality labeled data more critical than just large volumes of data for supervised learning?",
             "options": {
-              "A": "GPU Hardware Only",
-              "B": "High-Speed Internet",
-              "C": "High-Quality Labeled Data",
-              "D": "Large Storage Systems"
+              "A": "Labeled data requires less storage space",
+              "B": "Models learn from the quality and accuracy of labels; poor labels lead to poor predictions regardless of data volume",
+              "C": "Labeled data processes faster",
+              "D": "Labeled data is cheaper to obtain"
             },
-            "correct_answer": "C"
+            "correct_answer": "B"
           }
         ]
       }
