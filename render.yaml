@@ -3,7 +3,7 @@ services:
   - type: web
     name: interactive-quiz-hub
     runtime: node
-    buildCommand: npm install && npm run build:frontend && cd backend && npm install
+    buildCommand: npm install && NODE_ENV=production npm run build:frontend && cd backend && npm install
     startCommand: NODE_ENV=production node backend/src/index.js
     envVars:
       - key: NODE_ENV
