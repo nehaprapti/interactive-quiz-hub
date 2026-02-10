@@ -31,8 +31,8 @@ const Leaderboard = () => {
     const fetchLeaderboard = async () => {
       try {
         const API_URL = import.meta.env.VITE_API_URL ||
-          (import.meta.env.MODE === 'production' ? window.location.origin : 'http://localhost:3000');
-        const response = await fetch(`${API_URL}/api/quiz/leaderboard`);
+          (import.meta.env.MODE === 'production' ? `${window.location.origin}/api` : 'http://localhost:3000/api');
+        const response = await fetch(`${API_URL}/quiz/leaderboard`);
         const data = await response.json();
         setLeaderboard(data.leaderboard || []);
       } catch (error) {

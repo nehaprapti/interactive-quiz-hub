@@ -31,8 +31,8 @@ const QuizPage = () => {
       if (isFinished && quiz && token) {
         try {
           const API_URL = import.meta.env.VITE_API_URL ||
-            (import.meta.env.MODE === 'production' ? window.location.origin : 'http://localhost:3000');
-          await fetch(`${API_URL}/api/quiz/submit-score`, {
+            (import.meta.env.MODE === 'production' ? `${window.location.origin}/api` : 'http://localhost:3000/api');
+          await fetch(`${API_URL}/quiz/submit-score`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
